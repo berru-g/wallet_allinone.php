@@ -18,7 +18,7 @@ if (isset($_POST['envoie'])) {
         
         header('location: home.php');
     } else{
-      echo "Veuillez vous connecter";
+      echo "Vous n'etes pas encore inscrit";
     }
 }
 ?>
