@@ -4,6 +4,7 @@
 ## This version is in PHP with registration + connection -> redirects to home.php
 
    - work in progress
+   - bug login
    - The input is missing so that the user can indicate these cryptos and the number in their possession.
 
   #### Function; 
