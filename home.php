@@ -1,7 +1,7 @@
 <?php
-session_start();
+/*session_start();
 echo "bienvenue, ";
-echo $_SESSION['pseudo'];
+echo $_SESSION['pseudo'];*/
 ?>
 <html lang="en">
   <!-- I needed an all in one wallet, I'm happy with the result so I'm sharing. 
