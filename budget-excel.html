@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tableau de Budget</title>
+  <style>
+    table {
+      width: 50%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tableau de Budget</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Catégorie</th>
+        <th>Montant</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Dépenses -->
+      <tr>
+        <td>Dépenses 1</td>
+        <td><input type="text" class="depense" value="50"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 2</td>
+        <td><input type="text" class="depense" value="30"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 3</td>
+        <td><input type="text" class="depense" value="70"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 4</td>
+        <td><input type="text" class="depense" value="40"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 5</td>
+        <td><input type="text" class="depense" value="60"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 6</td>
+        <td><input type="text" class="depense" value="20"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 7</td>
+        <td><input type="text" class="depense" value="25"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 8</td>
+        <td><input type="text" class="depense" value="35"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 9</td>
+        <td><input type="text" class="depense" value="45"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 10</td>
+        <td><input type="text" class="depense" value="55"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 11</td>
+        <td><input type="text" class="depense" value="65"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 12</td>
+        <td><input type="text" class="depense" value="75"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 13</td>
+        <td><input type="text" class="depense" value="85"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 14</td>
+        <td><input type="text" class="depense" value="95"></td>
+      </tr>
+      <tr>
+        <td>Dépenses 15</td>
+        <td><input type="text" class="depense" value="105"></td>
+      </tr>
+      <tr>
+        <td>Total Dépenses</td>
+        <td id="total-depenses">0</td>
+      </tr>
+
+      <!-- Revenus -->
+      <tr>
+        <td>Revenus 1</td>
+        <td><input type="text" class="revenu" value="100"></td>
+      </tr>
+      <tr>
+        <td>Revenus 2</td>
+        <td><input type="text" class="revenu" value="200"></td>
+      </tr>
+      <tr>
+        <td>Revenus 3</td>
+        <td><input type="text" class="revenu" value="50"></td>
+      </tr>
+      <tr>
+        <td>Total Revenus</td>
+        <td id="total-revenus">0</td>
+      </tr>
+
+      <!-- Solde Net -->
+      <tr>
+        <td>Solde Net</td>
+        <td id="solde-net">0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    function calculerTotal(elementId, classe) {
+      const elements = document.getElementsByClassName(classe);
+      const total = Array.from(elements).reduce((acc, el) => acc + parseInt(el.value || 0), 0);
+      document.getElementById(elementId).textContent = total;
+    }
+
+    function calculerSoldeNet() {
+      const totalRevenus = parseInt(document.getElementById('total-revenus').textContent);
+      const totalDepenses = parseInt(document.getElementById('total-depenses').textContent);
+      const soldeNet = totalRevenus - totalDepenses;
+      document.getElementById('solde-net').textContent = soldeNet;
+    }
+
+    function ajouterEcouteursEvenements() {
+      const champsDepense = document.querySelectorAll('.depense');
+      const champsRevenu = document.querySelectorAll('.revenu');
+
+      champsDepense.forEach(champ => {
+        champ.addEventListener('input', () => {
+          calculerTotal('total-depenses', 'depense');
+          calculerSoldeNet();
+        });
+      });
+
+      champsRevenu.forEach(champ => {
+        champ.addEventListener('input', () => {
+          calculerTotal('total-revenus', 'revenu');
+          calculerSoldeNet();
+        });
+      });
+    }
+
+    // Appeler cette fonction pour initialiser les écouteurs d'événements
+    ajouterEcouteursEvenements();
+
+  </script>
+
+</body>
+</html>
