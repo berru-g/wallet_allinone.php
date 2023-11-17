@@ -3,7 +3,7 @@
       <div class="footer-column">
         <h3 class="footer-title">Profil</h3>
         <a href="#" class="footer-link">Wallet</a>
-        <a href="#" class="footer-link">Earn</a>
+        <a href="budget\index.html" class="footer-link">Budget</a>
         <a href="#" class="footer-link">Trade</a>
       </div>
       <div class="footer-column">

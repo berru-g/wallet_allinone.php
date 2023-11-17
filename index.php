@@ -39,8 +39,7 @@ https://github.com/berru-g/All-in-one-dashboard-->
   <meta name="robots" content="index, follow">  
   <meta property="og:title" content="Outil de gestion de portefeuille wallet.">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-
+    
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.20/dist/sweetalert2.min.css">

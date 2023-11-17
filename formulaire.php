@@ -24,6 +24,7 @@ if (isset($_POST['envoie'])) {
     }
 }
 ?>
+<link rel="stylesheet" href="style.css">
 <div id="message">
 <h2>Inscription</h2>
 <form id="monFormulaire" action="" method="POST" enctype="multipart/form-data" class="proceed maskable" name="login" autocomplete="off" novalidate="">
