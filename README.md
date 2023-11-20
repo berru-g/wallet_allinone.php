@@ -5,7 +5,7 @@
 ## This [version](https://w4llet-all-in-one.000webhostapp.com/) is in PHP with registration + connection -> redirects to home.php hosted on 000webhostapp.com
 
    - work in progress
-   - bug login
+   - bug login so [tuto login system](https://www.youtube.com/watch?v=jEgzxXCB9-w&list=LL&index=2)
    - The input is missing so that the user can indicate these cryptos and the number in their possession.
 
   #### Function; 

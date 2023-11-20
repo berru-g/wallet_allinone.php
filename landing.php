@@ -1,7 +1,17 @@
-<?php
-session_start();
-echo "bienvenue, ";
-echo $_SESSION['pseudo'];
+<?php 
+    session_start();
+    require_once 'config.php'; // ajout connexion bdd 
+   // si la session existe pas soit si l'on est pas connecté on redirige
+    if(!isset($_SESSION['user'])){
+        header('Location:index.php');
+        die();
+    }
+
+    // On récupere les données de l'utilisateur
+    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE token = ?');
+    $req->execute(array($_SESSION['user']));
+    $data = $req->fetch();
+   
 ?>
 <html lang="en">
   <!-- I needed an all in one wallet, I'm happy with the result so I'm sharing. 
@@ -18,6 +28,7 @@ https://github.com/berru-g/All-in-one-dashboard-->
   <meta name="robots" content="index, follow">  
   <meta property="og:title" content="Outil de gestion de portefeuille wallet.">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -189,5 +200,7 @@ https://github.com/berru-g/All-in-one-dashboard-->
 
 <?php include_once('footer.php'); ?>
 <script src="script.js"></script>
-</body>
+ 
+        
+  </body>
 </html>
