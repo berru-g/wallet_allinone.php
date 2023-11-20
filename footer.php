@@ -2,8 +2,8 @@
     <div class="footer-columns">
       <div class="footer-column">
         <h3 class="footer-title">Profil</h3>
-        <a href="#" class="footer-link">My Wallet</a>
-        <a href="budget\index.html" class="footer-link">Quick Budget</a>
+        <a href="landing.php" class="footer-link">My Wallet</a>
+        <a href="budget\index.html" class="footer-link">Sheet Budget</a>
         <a href="deconnexion.php" class="footer-link">Deconnexion</a>
         <a href="change.php" class="footer-link">Change password</a>
       </div>

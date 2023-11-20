@@ -234,7 +234,7 @@ hamburgerMenu.addEventListener('click', () => {
   // Utilisation de SweetAlert pour afficher la fenêtre contextuelle
   Swal.fire({
     title: 'All my wallets',
-    html: '<ul><li><a href="https://shop.ledger.com/?r=">Ledger</a></li><li><a href="https://accounts.binance.com/register?ref=">Binance</a></li><li><a href="https://github.com/berru-g/">Src code</a></li><li><a href="budget/index.html">Quick budget</a></li></ul>',
+    html: '<ul><li><a href="https://shop.ledger.com/?r=">Ledger</a></li><li><a href="https://accounts.binance.com/register?ref=">Binance</a></li><li><a href="budget/index.html">Budget interactif</a></li><li><a href="#">Input</a></li><li><a href="deconnexion.php">Deconnexion</a></li></ul>',
     showCloseButton: true,
     showConfirmButton: false,
     customClass: {
