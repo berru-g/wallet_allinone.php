@@ -4,7 +4,7 @@
 
 ### [first version static](https://github.com/berru-g/All-in-one-dashboard)
 
-### This [version](https://w4llet-all-in-one.000webhostapp.com/) is in PHP with registration + connection -> redirects to home.php hosted on 000webhostapp.com
+### This [version](https://w4llet-all-in-one.000webhostapp.com/) is in PHP with registration + connection -> redirects to home.php hosted on 000webhostapp.com or you localhost via MAMP
 
    - work in progress 'proto version'
    - bug login so [tuto login system](https://www.youtube.com/watch?v=jEgzxXCB9-w&list=LL&index=2)
